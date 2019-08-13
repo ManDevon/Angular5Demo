@@ -1,0 +1,35 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+   {{ title }}!
+  </h1>
+</div>
+<div>
+  <div>双向绑定</div>
+  <input [(ngModel)]= 'username'>
+  <div>{{username}}</div>
+</div>
+<div>
+  <div>单向绑定</div>
+  <input value="{{username}}">
+  <div>{{username}}</div>
+</div>
+<div>
+  <h1>Component</h1>
+  <test1-component></test1-component>
+</div>
+
+<div>
+  <h1>this is router loaded component</h1>
+  <router-outlet></router-outlet>
+</div>
+
+<div>
+  <h1>this is form validators</h1>
+  <form-validator></form-validator>
+</div>
+
+<div>
+  <h1>this is store</h1>
+  <app-article></app-article>
+</div>
