@@ -18,6 +18,12 @@ export class AppComponent implements OnInit, OnDestroy{
   }
   title = 'Hello world';
   username = 'John';
+  val = 'John';
+  items = [
+    {John: 'John', sex:'男'},
+    {Devon :'Poly', sex:'男'},
+    {Lucy: 'Lucy', sex: '女'}
+  ];
   ngOnInit():void {
     let injector = ReflectiveInjector.resolveAndCreate([injDemo1,MakeDoor]);
     let door = injector.get(injDemo1);

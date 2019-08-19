@@ -33,3 +33,14 @@
   <h1>this is store</h1>
   <app-article></app-article>
 </div>
+
+<div>
+  <h1>pipe</h1>
+  <input type="text" name="user" [(ngModel)]="val"/>
+  <ul>
+    <li *ngFor="let item of items | search:'John':val">
+      <div>{{item[val]}}</div>
+      <div>{{item['sex']}}</div>
+    </li>
+  </ul>
+</div>

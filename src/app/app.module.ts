@@ -18,6 +18,7 @@ import { HeroService } from './services/hero.service'
 
 
 import { reducers, metaReducers } from './reducers/reducer';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { reducers, metaReducers } from './reducers/reducer';
     Test1Component,
     DirectivesDirective,
     ValidatorComponent,
-    ArticleComponent
+    ArticleComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
