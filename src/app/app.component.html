@@ -6,17 +6,18 @@
 </div>
 <div>
   <div>双向绑定</div>
-  <input [(ngModel)]= 'username'>
-  <div>{{username}}</div>
+  <input [(ngModel)]= 'username1'>
+  <div>{{username1}}</div>
 </div>
 <div>
   <div>单向绑定</div>
-  <input value="{{username}}">
-  <div>{{username}}</div>
+  <input value="{{username1}}">
+  <div>{{username1}}</div>
 </div>
 <div>
   <h1>Component</h1>
-  <test1-component></test1-component>
+  <test1-component [username]="title" (change)="childEmit($event)"></test1-component>
+  {{filed}}
 </div>
 
 <div>

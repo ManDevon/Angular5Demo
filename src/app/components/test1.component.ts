@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input, Output ,EventEmitter} from '@angular/core'
 
 @Component({
     selector: 'test1-component',
@@ -7,5 +7,15 @@ import { Component } from '@angular/core'
 })
 
 export class Test1Component {
-
+    public filed:string;
+    @Input()
+    username = "";
+    @Output()
+    change: EventEmitter<string> = new EventEmitter<string>();
+    constructor(){
+        this.filed="I'm child";
+    }
+    commit(){
+        this.change.emit(this.filed);
+    }
 }

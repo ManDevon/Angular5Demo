@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy ,ReflectiveInjector } from '@angular/core';
+import { Component, OnInit, OnDestroy ,ReflectiveInjector, Input } from '@angular/core';
 import { HeroService } from './services/hero.service'
 import MakeDoor from './injector/inj.injector.makeDoor';
 import injDemo1 from './injector/inj.injector'
@@ -16,8 +16,9 @@ export class AppComponent implements OnInit, OnDestroy{
   ngOnDestroy(): void {
     throw new Error("Method not implemented.");
   }
+  
   title = 'Hello world';
-  username = 'John';
+  username1 = 'John';
   val = 'John';
   items = [
     {John: 'John', sex:'男'},
@@ -30,6 +31,9 @@ export class AppComponent implements OnInit, OnDestroy{
     door.build();
     this.heros = this.heroService.getHeros()
     console.log("heros:"+ JSON.stringify(this.heros));
+  }
+  childEmit(event){
+    console.log(event+"#######");
   }
 }
 
